@@ -1,0 +1,40 @@
+<!doctype html><meta charset="utf-8"><title>Wilson Ninja Hub</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css">
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo"></div><h1>Wilson Ninja Hub — Home</h1></div>
+    <nav class="row">
+      <a class="btn" href="groups.html">Groups</a>
+      <a class="btn" href="tools.html">Master Tools</a>
+      <a class="btn" href="README.html">Docs</a>
+    </nav>
+  </header>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Start Here</h2>
+      <p class="small">Pick a group or open the master tools. All content pulls from /data JSON.</p>
+      <div class="row">
+        <a class="btn" href="groups.html">Open Group Dashboards</a>
+        <a class="btn" href="tools.html">Open Master Tools</a>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Today’s Lesson</h2>
+      <div class="kv">
+        <div>Active Substep</div>
+        <div><select id="substep"></select> <span class="badge" id="substepBadge">—</span></div>
+      </div>
+      <div class="row">
+        <button class="btn" id="summon">🥷 Summon Lesson Deck (PPTX)</button>
+        <a class="btn" href="group.html">Open Group Template</a>
+      </div>
+      <p class="small">No Google required — PPTX is built client‑side via PptxGenJS.</p>
+    </div>
+  </section>
+
+  <footer>Static hub — host on GitHub Pages • Edit /data to change content</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+<script src="js/app.js"></script>

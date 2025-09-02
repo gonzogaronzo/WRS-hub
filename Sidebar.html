@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <style>
+    body{font-family:'Nunito Sans',sans-serif;padding:10px;}
+    .pill{display:inline-block;padding:4px 8px;margin:2px;background:#eee;border-radius:12px;cursor:pointer;}
+    button{margin:4px;}
+  </style>
+  <script>
+    function insertToken(t){ google.script.run.insertToken(t); }
+    function buildSel(){ google.script.run.buildSelected(); }
+    function buildAll(){ google.script.run.buildAllBySubstep(); }
+    function validate(){ google.script.run.validateSelected(); }
+  </script>
+</head>
+<body>
+  <div>
+    <span class="pill" onclick="insertToken('{macron}')">macron</span>
+    <span class="pill" onclick="insertToken('{breve}')">breve</span>
+    <span class="pill" onclick="insertToken('{schwa}')">schwa</span>
+    <span class="pill" onclick="insertToken('[]')">lock</span>
+    <span class="pill" onclick="insertToken('{prefix=pre-}')">prefix</span>
+    <span class="pill" onclick="insertToken('{suffix=-ing}')">suffix</span>
+    <span class="pill" onclick="insertToken('{accent=2}')">accent</span>
+  </div>
+  <div style="margin-top:10px;">
+    <button onclick="buildSel()">Build Selected</button>
+    <button onclick="buildAll()">Build All by Substep</button>
+    <button onclick="validate()">Validate Markup</button>
+  </div>
+</body>
+</html>
